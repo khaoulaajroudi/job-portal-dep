@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const fetchJobs = createAsyncThunk('jobs/fetchJobs', async () => {
-  const response = await axios.get('job-portalbackend.vercel.app/job/all');
+  const response = await axios.get('job-portal-dep.vercel.app/job/all');
   return response.data;
 });
 
