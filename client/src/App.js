@@ -5,8 +5,16 @@ import JobList from './Components/JobList';
 import JobDetails from './Components/Jobdetails';
 import Footer from './Components/Footer';
 import Header from './Components/Header';
+import { fetchJobs } from './js/jobSlice';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 function App() {
+  const dispatch=useDispatch()
+  useEffect(() => {
+dispatch(fetchJobs())
+  }, [])
+  
   return (
     <div className="App">
         

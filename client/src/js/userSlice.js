@@ -7,7 +7,7 @@ export const registerUser = createAsyncThunk(
   'user/register',
   async (userData, { rejectWithValue }) => {
     try {
-      const response = await axios.post('job-portal-dep.vercel.app/users/register', userData);
+      const response = await axios.post('https://job-portal-dep.vercel.app/users/register', userData);
       return response.data;
     } catch (error) {
       return rejectWithValue(error.response.data);
